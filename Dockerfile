@@ -31,6 +31,8 @@ RUN apt-get update -yqq \
     /usr/share/doc \
     /usr/share/doc-base
 
+ADD requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 ADD entrypoint.sh /root/entrypoint.sh
 
 EXPOSE 8080
